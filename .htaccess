@@ -1,0 +1,9 @@
+<IfModule mod_headers.c>
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^www\.thenativestudio\.com
+    RewriteRule ^(.*)$ http://thenativestudio.com$1 [R=permanent,L]
+
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
